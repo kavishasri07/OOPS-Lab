@@ -45,20 +45,20 @@ public:
 
 int main() {
     BankAccount accounts[3] = {
-        BankAccount(101, "Kavya"),
-        BankAccount(102, "Riya", 5000),
-        BankAccount(103, "Neha", 8000)
+        BankAccount(101, "Hello1"),
+        BankAccount(102, "Hello2", 5000),
+        BankAccount(103, "Hello3", 8000)
     };
     accounts[0].deposit(3000);
     accounts[1].deposit(2000, 10);
     accounts[2].withdraw(1000);
-    cout << "\n--- All Accounts ---\n";
+    cout << "All Accounts";
     for (int i = 0; i < 3; i++) {
         cout << endl;
         accounts[i].display();
     }
     int searchNo;
-    cout << "\nEnter account number to search: ";
+    cout << "Enter account number to search: ";
     cin >> searchNo;
     bool found = false;
     for (int i = 0; i < 3; i++) {
@@ -79,7 +79,7 @@ int main() {
             maxIndex = i;
         }
     }
-    cout << "\n--- Highest Balance Account ---\n";
+    cout << "Highest Balance Account";
     accounts[maxIndex].display();
     return 0;
 }
